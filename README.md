@@ -2,18 +2,17 @@ Angular Date Time Picker
 ========================
 
 **Angular date time picker - Angular reusable UI component**
-**This package supports Angular 6+**
+**This package supports Angular 5+**
 
 
 Breaking Changes
 -------
- - The picker has been updated for Angular 6+ apps. If you are still using Angular 5, you should install the picker version 5.2.6.
-   ```npm install ng-pick-datetime@5.2.6 --save```
- - Added Output Events yearSelected, monthSelected
+ - Add two new selectMode: 'rangeFrom' and 'rangeTo'.
+ - Allow user to select years from a year list.
 
 Description
 -------
-Simple Angular date time picker. Online demo is [here](https://danielykpan.github.io/date-time-picker/), Online StackBlitz is [here](https://stackblitz.com/github/DanielYKPan/owl-examples/tree/date-time-picker).
+Simple Angular date time picker. Online demo is [here](https://danielykpan.github.io/date-time-picker/). 
 This picker is responsive design, so feel free to try it in your desktops, tablets and mobile devices. 
 
 How to Use
@@ -101,15 +100,11 @@ Properties for `owl-date-time`
 |`startAt`| T/null |Optional|`null`| The moment to open the picker to initially. |
 |`firstDayOfWeek`|number|Optional|`0`| Set the first day of week. Valid value is from 0 to 6. 0: Sunday ~ 6: Saturday|
 |`showSecondsTimer`|boolean|Optional|`false`| When specify it to true, it would show a timer to configure the second's value |
-|`hideOtherMonths`|boolean|Optional|`false`| Whether to hide dates in other months at the start or end of the current month |
 |`hour12Timer`|boolean|Optional|`false`| When specify it to true, the timer would be in hour12 format mode|
 |`stepHour`|number|Optional|`1`| Hours to change per step.|
 |`stepMinute`|number|Optional|`1`| Minutes to change per step.|
 |`stepSecond`|number|Optional|`1`| Seconds to change per step.|
-|`scrollStrategy`|ScrollStrategy|Optional|`BlockScrollStrategy`| Define the scroll strategy when the picker is open. Learn more this from https://material.angular.io/cdk/overlay/overview#scroll-strategies.|
 |`disabled`|boolean|Optional|`false`|When specify to true, it would disable the picker.|
-|`backdropClass`|string/string[]|Optional|`null`|Custom class for the picker backdrop.|
-|`panelClass`|string/string[]|Optional|`null`|Custom class for the picker overlay panel.|
 
 Events for `owl-date-time`
 -------
@@ -117,8 +112,6 @@ Events for `owl-date-time`
 |:--- |:--- |:--- |
 |`afterPickerOpen`|null|Callback to invoke when the picker is opened|
 |`afterPickerClosed`|null|Callback to invoke when the picker is closed.|
-|`yearSelected`|T|Callback to invoke when the picker is closed.This doesn't imply a change on the selected date.|
-|`monthSelected`|T|Callback to invoke when the picker is closed.This doesn't imply a change on the selected date.|
 
 Properties for `input[owlDateTime]`
 -------
@@ -164,7 +157,6 @@ Properties for `owl-date-time-inline`
 |`startAt`| T/null |Optional|`null`| The moment to open the picker to initially. |
 |`firstDayOfWeek`|number|Optional|`0`| Set the first day of week. Valid value is from 0 to 6. 0: Sunday ~ 6: Saturday|
 |`showSecondsTimer`|boolean|Optional|`false`| When specify it to true, it would show a timer to configure the second's value |
-|`hideOtherMonths`|boolean|Optional|`false`| Whether to hide dates in other months at the start or end of the current month |
 |`hour12Timer`|boolean|Optional|`false`| When specify it to true, the timer would be in hour12 format mode|
 |`stepHour`|number|Optional|`1`| Hours to change per step.|
 |`stepMinute`|number|Optional|`1`| Minutes to change per step.|
@@ -186,8 +178,7 @@ none
 
 Demo
 -------
-- Online demo is [here](https://danielykpan.github.io/date-time-picker/)
-- Online StackBlitz is [here](https://stackblitz.com/github/DanielYKPan/owl-examples/tree/date-time-picker)
+Online demo is [here](https://danielykpan.github.io/date-time-picker/)
 
 License
 -------
